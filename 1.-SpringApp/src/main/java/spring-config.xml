@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- Inicia Ejercicio 1 -->
+	<bean id="admin" class="org.certificatic.Administrador" />
+
+	<bean id="adminGetSet" class="org.certificatic.Administrador">
+		<property name="idAd" value="88"></property>
+		<property name="nombre" value="Lolita"></property>
+		
+		<property name="direccion" ref="direccion"></property>
+	</bean>
+
+
+	<bean id="adminConstructor" class="org.certificatic.Administrador">
+		<constructor-arg name="idAd" value="88"></constructor-arg>
+		<constructor-arg name="nombre" value="Juanito"></constructor-arg>
+	</bean>
+
+	<!-- Finaliza ejercicio 1 -->
+
+
+	<!-- Inicia Ejercicio 2 -->
+
+	<bean id="direccion" class="org.certificatic.Direccion">
+		<constructor-arg name="calle" value="Insurgentes sur"></constructor-arg>
+		<constructor-arg name="cp" value="54270"></constructor-arg>
+	</bean>
+
+	<!-- Finaliza Ejercicio 2 -->
+
+</beans>
